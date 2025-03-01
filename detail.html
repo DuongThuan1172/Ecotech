@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EcoBot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar input {
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .search-bar button svg {
+            transition: transform 0.2s;
+        }
+        .search-bar button:hover svg {
+            transform: scale(1.1);
+        }
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: border 0.3s;
+        }
+        .thumbnail:hover, .thumbnail:focus {
+            border: 2px solid #007bff;
+        }
+        .btn-accent {
+            background-color: #007bff;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            transition: background 0.3s;
+        }
+        .btn-accent:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 40px 0;
+        }
+        footer .nav-link {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        footer .nav-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg p-3">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.png" alt="logo" class="img-fluid" style="max-height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-3 fw-bold text-uppercase">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="book-details" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <figure class="product-thumb text-center">
+                        <img src="/images/bottle-black.jpg" class="img-fluid rounded shadow" id="mainImage" style="max-width: 400px;">
+                    </figure>
+                    <div class="thumbnail-gallery d-flex justify-content-center mt-3 gap-2">
+                        <img src="/images/bottle-black.jpg" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/images/bottle-gradient.jpg" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/images/bottle-blue.jpg" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/images/bottle-green.jpg" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/images/bottle-white.jpg" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/images/bottle-pink.jpg" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="mt-4">Bình nước thông minh EcoBot </h3>
+                    <p><strong>Mô tả:<br></strong> 💁Với bình nước thông minh, việc duy trì thói quen uống nước trở nên dễ dàng hơn bao giờ hết.<br>
+                        👉🏻Nhắc nhở thông minh: Không còn lo quên uống nước nữa nhé! Bình nước sẽ tự động nhắc bạn khi đến giờ.<br>
+                        👉🏻Theo dõi lượng nước: Dễ dàng theo dõi mục tiêu uống nước hàng ngày của bạn.<br>
+                        👉🏻Hâm nóng tiện lợi : Duy trì nhiệt độ lý tưởng cho đồ uống.<br>
+                        👉🏻Kết nối với ứng dụng: Theo dõi tiến độ và đặt mục tiêu uống nước hàng ngày, đồng thời tích hợp với các ứng dụng sức khỏe khác.</p>
+                    <p><strong>Giá:</strong> <span style="font-size: 1.5rem;font-weight: bold;color: #ff5722; ">700.000 VND</span></p>
+                    <p><strong>Nhà sản xuất:</strong> Publisher Name</p>
+                    <p><strong>Status:</strong> <span class="badge bg-success">Available</span></p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/logo.png" width="200" alt="logo">
+                </div>
+                <div class="col-md-2">
+                    <h5>Organic</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="nav-link">About us</a></li>
+                        <li><a href="#" class="nav-link">Conditions</a></li>
+                        <li><a href="#" class="nav-link">Journals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="nav-link">Offers</a></li>
+                        <li><a href="#" class="nav-link">Coupons</a></li>
+                        <li><a href="#" class="nav-link">Stores</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="nav-link">FAQ</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                        <li><a href="#" class="nav-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById("mainImage").src = element.src;
+        }
+    </script>
+</body>
+</html>
